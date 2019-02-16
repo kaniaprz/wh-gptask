@@ -4,6 +4,7 @@ import com.williamhill.pageobjects.MainPage;
 import com.williamhill.pageobjects.SideNavBarPage;
 import com.williamhill.pageobjects.football.CompetitionsPage;
 import com.williamhill.pageobjects.football.EnglishPremierLeaguePage;
+import com.williamhill.pageobjects.football.FootballMatchEventPage;
 import com.williamhill.testbase.EndToEndBase;
 import org.testng.annotations.Test;
 
@@ -20,6 +21,10 @@ public class BettingTest extends EndToEndBase {
         SideNavBarPage sideBarNav = new SideNavBarPage(driver);
         CompetitionsPage competitions = sideBarNav.navigateToCompetitions();
         EnglishPremierLeaguePage englishPremierLeague = competitions.navigateToEnglishPremierLeague();
+        FootballMatchEventPage footballMatchEvent = englishPremierLeague.selectFirstFootbalEvent();
+        footballMatchEvent.
+                addHomeTeamWinToBet();
+
 
     }
 
