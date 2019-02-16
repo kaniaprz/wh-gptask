@@ -6,6 +6,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import com.williamhill.helpers.OSValidator;
 import com.williamhill.helpers.PropertiesReader;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;
 import java.net.URL;
@@ -79,4 +83,24 @@ public class EndToEndBase {
         }
         return driver;
     }
+
+    /**
+     * Run setUpDriver before each test.
+     */
+
+    @BeforeClass(alwaysRun = true)
+    public void setUp() throws Exception {
+        setUpDriver();
+    }
+
+    /**
+     * Tidy up after test run
+     */
+    @AfterClass
+    public void tearDownTest() {
+        driver.close();
+        driver.quit();
+    }
+
+
 }
