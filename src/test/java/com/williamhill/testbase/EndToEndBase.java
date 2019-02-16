@@ -1,5 +1,6 @@
 package com.williamhill.testbase;
 
+import com.williamhill.pageobjects.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -98,8 +99,13 @@ public class EndToEndBase {
      */
     @AfterClass
     public void tearDownTest() {
-        driver.close();
-        driver.quit();
+        //driver.close();
+        //driver.quit();
+    }
+
+    public MainPage openMainPage(){
+        driver.get("https://sports.williamhill.com/betting/en-gb");
+        return new MainPage(driver);
     }
 
 

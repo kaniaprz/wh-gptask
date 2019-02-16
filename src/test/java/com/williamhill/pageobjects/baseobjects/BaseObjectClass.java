@@ -13,6 +13,10 @@ public class BaseObjectClass {
     protected WebDriverWait longWait;
     protected Wait fluentWait;
 
+    /**
+     * Wrappers for basic user actions.
+     */
+
     public BaseObjectClass(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver,30);
@@ -34,6 +38,10 @@ public class BaseObjectClass {
         return element.getText();
     }
 
+    /**
+     * Click on webelement using basic click or using javascript executor.
+     * From my experience, on each website there is problem with that, so added it.
+     */
     protected void clickElement(WebElement element){
         try {
             waitForElementClickable(element);
