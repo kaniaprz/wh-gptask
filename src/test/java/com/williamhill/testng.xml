@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Recruitment Suit" verbose="1" >
+    <test name="Betting Tests" >
+        <classes>
+            <class name="com.williamhill.tests.BettingTest" />
+        </classes>
+    </test>
+</suite>
