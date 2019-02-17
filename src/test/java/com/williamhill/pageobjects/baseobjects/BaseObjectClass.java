@@ -26,6 +26,10 @@ public class BaseObjectClass {
         longWait = new WebDriverWait(driver,90);
     }
 
+    /**
+     * Wait configuration
+     */
+
     protected void waitForElementVisibility(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
     }
@@ -33,6 +37,10 @@ public class BaseObjectClass {
     protected void waitForElementClickable(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+
+    /**
+     * Get text from Webelement and convert it in to String.
+     */
 
     protected String getText(WebElement element){
         waitForElementVisibility(element);
@@ -52,6 +60,10 @@ public class BaseObjectClass {
             js.executeScript("arguments[0].click();", element);
         }
     }
+
+    /**
+     * Type text to specific fields using Webelement
+     */
 
     protected void typeTextInField(WebElement element, String text){
         waitForElementClickable(element);

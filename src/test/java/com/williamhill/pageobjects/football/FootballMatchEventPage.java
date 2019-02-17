@@ -22,10 +22,23 @@ public class FootballMatchEventPage extends BaseObjectClass {
         PageFactory.initElements(driver,this);
     }
 
+    /**
+     * Navigate to Competitions site
+     */
+
     public FootballMatchEventPage addHomeTeamWinToBet(){
         clickElement(homeTeamWinBtn);
         return new FootballMatchEventPage(driver);
     }
+
+    /**
+     * Get odd for home team win in 90 minutes.
+     */
+
+    public String homeTeamWinOdd(){
+        return getText(homeTeamWinBtn);
+    }
+
 
 
 }

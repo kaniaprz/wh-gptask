@@ -26,6 +26,10 @@ public class CompetitionsPage extends BaseObjectClass {
         } catch (Exception e){}
     }
 
+    /**
+     * Navigate to Premiership page.
+     */
+
     public EnglishPremierLeaguePage navigateToEnglishPremierLeague(){
         clickElement(engPremierLeagueBtn);
         return new EnglishPremierLeaguePage(driver);

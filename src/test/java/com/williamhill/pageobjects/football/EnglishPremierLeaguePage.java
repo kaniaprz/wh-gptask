@@ -26,7 +26,10 @@ public class EnglishPremierLeaguePage extends BaseObjectClass {
         } catch (Exception e){}
     }
 
-    public FootballMatchEventPage selectFirstFootbalEvent(){
+    /**
+     * Select first football event from Match List grid.
+     */
+    public FootballMatchEventPage selectFirstFootballEvent(){
         clickElement(firstEventGroup);
         return new FootballMatchEventPage(driver);
     }

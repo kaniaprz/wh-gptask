@@ -26,6 +26,9 @@ public class SideNavBarPage extends BaseObjectClass {
         PageFactory.initElements(driver,this);
     }
 
+    /**
+     * Navigate to Competitions site
+     */
     public CompetitionsPage navigateToCompetitions(){
         clickElement(footballBtn);
         clickElement(competitionsBtn);
